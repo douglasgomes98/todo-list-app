@@ -7,45 +7,35 @@
     android:layout_height="100dp"
     android:layout_marginBottom="20dp">
 
-    <LinearLayout
-        android:layout_width="220dp"
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_marginLeft="16dp">
+        android:layout_marginHorizontal="16dp">
 
         <TextView
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentLeft="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/itemTitle"
-            android:layout_marginTop="19dp"
             android:textSize="22sp"
             android:textColor="#000C5D"
             android:text="Buy a laptop"
             />
+
         <TextView
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentRight="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/itemDesc"
             android:textSize="18sp"
-            android:text="Buy a lenovo laptop tom"
-            android:textColor="#ADADAD"
-            android:layout_marginTop="8dp"
+            android:textColor="#F63EA5"
+            android:text="Tomorrow"
+            android:textAlignment="center"
             />
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="30dp">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/itemDate"
-        android:layout_marginTop="8dp"
-        android:textSize="18sp"
-        android:textColor="#F63EA5"
-        android:text="Tomorrow"
-        android:textAlignment="center"/>
-    </LinearLayout>
+    </RelativeLayout>
 </LinearLayout>

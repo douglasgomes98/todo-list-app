@@ -30,7 +30,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:text="To-do List"
+                    android:text="Lista de Todos"
                     android:textColor="#FFF"
                     android:textSize="28sp"
                     android:textStyle="bold" />
@@ -38,7 +38,7 @@
                     android:id="@+id/subtitlePage"
                     android:textSize="18sp"
                     android:textColor="#4A4E6A"
-                    android:text="A list of items to complete"
+                    android:text="Lista de itens a fazer."
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
             </LinearLayout>
@@ -75,7 +75,7 @@
         android:textSize="16sp"
         android:textColor="#9A9A9A"
         android:layout_marginTop="30dp"
-        android:text="No more tasks"
+        android:text="Não existem todos cadastrados."
         android:textAlignment="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

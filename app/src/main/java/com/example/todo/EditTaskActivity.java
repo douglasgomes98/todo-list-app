@@ -31,14 +31,12 @@ public class EditTaskActivity extends AppCompatActivity {
 
         editTitle = findViewById(R.id.editTitle);
         editDesc = findViewById(R.id.editDesc);
-        editTimeline = findViewById(R.id.editTimeline);
 
         btnEdit = findViewById(R.id.btnEdit);
         btnDelete = findViewById(R.id.btnDelete);
 
         editTitle.setText(getIntent().getStringExtra("itemTitle"));
         editDesc.setText(getIntent().getStringExtra("itemDesc"));
-        editTimeline.setText(getIntent().getStringExtra("itemDate"));
 
         final String key = getIntent().getStringExtra("itemKey");
 
@@ -53,7 +51,6 @@ public class EditTaskActivity extends AppCompatActivity {
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         dataSnapshot.getRef().child("title").setValue(editTitle.getText().toString());
                         dataSnapshot.getRef().child("desc").setValue(editDesc.getText().toString());
-                        dataSnapshot.getRef().child("date").setValue(editTimeline.getText().toString());
 
                         Intent intent = new Intent(EditTaskActivity.this, MainActivity.class);
                         startActivity(intent);

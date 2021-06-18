@@ -33,13 +33,10 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder> 
 
         final String title = items.get(position).getTitle();
         final String desc = items.get(position).getDesc();
-        final String date = items.get(position).getDate();
         final String key = items.get(position).getKey();
 
         holder.title.setText(title);
         holder.desc.setText(desc);
-        holder.date.setText(date);
-
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,7 +44,6 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder> 
                 Intent intent = new Intent(context, EditTaskActivity.class);
                 intent.putExtra("itemTitle", title);
                 intent.putExtra("itemDesc", desc);
-                intent.putExtra("itemDate", date);
                 intent.putExtra("itemKey", key);
 
                 context.startActivity(intent);
@@ -67,7 +63,6 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder> 
             super(itemView);
             title = (TextView) itemView.findViewById(R.id.itemTitle);
             desc = (TextView) itemView.findViewById(R.id.itemDesc);
-            date = (TextView) itemView.findViewById(R.id.itemDate);
         }
     }
 }

@@ -42,35 +42,30 @@ public class NewTaskActivity extends AppCompatActivity {
         lblDesc = findViewById(R.id.lblDesc);
         addDesc = findViewById(R.id.addDesc);
 
-        lblTimeline = findViewById(R.id.lblTimeline);
-        addTimeline = findViewById(R.id.addTimeline);
-
         btnCancel = findViewById(R.id.btnCancel);
         btnCreate = findViewById(R.id.btnCreate);
 
-        btnCreate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //inset data to database
-                reference = FirebaseDatabase.getInstance().getReference().child("Todo").child("Item" + itemId);
-                reference.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        dataSnapshot.getRef().child("title").setValue(addTitle.getText().toString());
-                        dataSnapshot.getRef().child("desc").setValue(addDesc.getText().toString());
-                        dataSnapshot.getRef().child("date").setValue(addTimeline.getText().toString());
-                        dataSnapshot.getRef().child("key").setValue(key);
+        btnCreate.setOnClickListener(v -> {
+            //inset data to database
+            reference = FirebaseDatabase.getInstance().getReference().child("Todo").child("Item" + itemId);
+            reference.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    dataSnapshot.getRef().child("title").setValue(addTitle.getText().toString());
+                    dataSnapshot.getRef().child("desc").setValue(addDesc.getText().toString());
+                    dataSnapshot.getRef().child("key").setValue(key);
 
-                        Intent intent = new Intent(NewTaskActivity.this, MainActivity.class);
-                        startActivity(intent);
-                    }
+                    Intent intent = new Intent(NewTaskActivity.this, MainActivity.class);
+                    startActivity(intent);
+                }
 
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
 
-                    }
-                });
-            }
+                }
+            });
         });
+
+        btnCancel.setOnClickListener(v -> finish());
     }
 }

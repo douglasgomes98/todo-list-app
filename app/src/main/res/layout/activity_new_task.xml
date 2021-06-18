@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="26dp"
-            android:text="Create task"
+            android:text="Criar Todo"
             android:textColor="#FFF"
             android:textSize="22sp"
             android:textAlignment="center"/>
@@ -52,7 +52,7 @@
                 android:id="@+id/lblTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Title"
+                android:text="Título"
                 android:textSize="18sp"
                 android:textColor="@color/colorPrimaryDark"
                 android:layout_marginBottom="10dp"/>
@@ -61,7 +61,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:inputType="text"
-                android:hint="Add title"
+                android:hint="Adicionar título"
                 android:textSize="20sp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/inputselection"
@@ -85,7 +85,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:text="Description"
+                android:text="Descrição"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="18sp" />
 
@@ -94,7 +94,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:inputType="text"
-                android:hint="Add description"
+                android:hint="Adicionar descrição"
                 android:maxLength="25"
                 android:textSize="20sp"
                 android:layout_marginBottom="10dp"
@@ -106,44 +106,6 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_marginTop="20dp"
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="16dp"
-            android:layout_marginLeft="16dp">
-
-            <TextView
-                android:id="@+id/lblTimeline"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:text="Timeline"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="18sp" />
-
-            <EditText
-                android:id="@+id/addTimeline"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:inputType="text"
-                android:hint="Add timeline"
-                android:textSize="20sp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/inputselection"
-                android:paddingLeft="12dp"
-                android:textColorHint="#B5B5B5"
-                android:textColor="@color/colorPrimaryDark"
-                />
-<!--            <DatePicker-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:datePickerMode="spinner"/>-->
-
-
-        </LinearLayout>
-
     </LinearLayout>
 
     <Button
@@ -151,7 +113,7 @@
         android:layout_marginRight="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="20dp"
-        android:text="Create"
+        android:text="Salvar"
         android:textColor="#FFF"
         android:textAllCaps="false"
         android:background="@drawable/btncreate"
@@ -164,7 +126,7 @@
         android:layout_marginRight="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="14dp"
-        android:text="Cancel"
+        android:text="Cancelar"
         android:textColor="#AFAFAF"
         android:textAllCaps="false"
         android:background="@drawable/btncancel"

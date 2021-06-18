@@ -80,5 +80,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.println(Log.ERROR, "database", databaseError.toString());
             }
         });
+
+        endPage.setVisibility(itemsList.isEmpty() ?  View.GONE : View.VISIBLE);
     }
 }
