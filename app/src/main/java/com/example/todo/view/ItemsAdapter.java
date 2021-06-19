@@ -1,7 +1,6 @@
-package com.example.todo;
+package com.example.todo.view;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +9,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.todo.R;
+import com.example.todo.entities.Item;
 
 import java.util.ArrayList;
 
